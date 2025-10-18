@@ -1,12 +1,12 @@
 {
   "name": "mobile-api-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "API RESTful para aplicación móvil - Node.js",
+  "main": "src/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node src/app.js",
+    "dev": "nodemon src/app.js",
+    "migrate": "node src/utils/sync.js"
   },
   "keywords": [],
   "author": "",
