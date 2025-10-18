@@ -19,10 +19,5 @@ const Product = sequelize.define('Product', {
 }, {
   timestamps: true // Agrega los campos createdAt y updatedAt automáticamente
 
-<<<<<<< HEAD:src/models/product.js
 });
 module.exports = Product;
-=======
- });
- module.exports = Product;
->>>>>>> d0e648885681f56cb4b189396d5207f76653ef17:src/models/Product.js
