@@ -18,3 +18,4 @@ EXPOSE 3000
 
 # Comando por defecto para iniciar el servidor
 CMD ["node", "src/app.js"]
+
