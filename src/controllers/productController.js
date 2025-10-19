@@ -43,7 +43,7 @@ exports.updateProduct = async (req, res) => {
     }
 };
 
-//Eliminar producto
+//Eliminar producto por Id
 exports.deleteProduct = async (req, res) => {
     try {
         const product = await Product.findByPk(req.params.id);
