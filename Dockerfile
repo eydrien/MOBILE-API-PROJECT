@@ -1,21 +1,20 @@
-# Imagen base ligera de Node.js
-FROM node:18-alpine
+# Usa Debian en lugar de Alpine (más compatible)
+FROM node:18-bullseye
 
-# Directorio de trabajo dentro del contenedor
+# Define directorio de trabajo
 WORKDIR /usr/src/app
 
-# Copiar package.json y package-lock.json
+# Copia los archivos de dependencias
 COPY package*.json ./
 
-# Instalar dependencias
+# Instala dependencias
 RUN npm install
 
-# Copiar el resto del código
+# Copia el resto del código fuente
 COPY . .
 
-# Exponer el puerto que usa la app
+# Exponer puerto
 EXPOSE 3000
 
-# Comando por defecto para iniciar el servidor
-CMD ["node", "src/app.js"]
-
+# Ejecutar la app
+CMD ["npm", "run", "dev"]
